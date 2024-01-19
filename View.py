@@ -18,10 +18,10 @@ def show_contacts(p_book: dict[int, list[str]]):
         max_size = list(map(lambda x: len(max(x, key = len)), list(zip(*p_book.values()))))
         print(max_size)
         if p_book:
-            print('\n' + '=' * (sum(max_size) + 7))
+            print('\n' + '=' * (sum(max_size) + 9))
             for n, contact in p_book.items():
                 print(f'{n:>3}. {contact[0]:<{max_size[0]}} {contact[1]:<{max_size[1]}} {contact[2]:<{max_size[2]}} ')
-            print('='*(sum(max_size) + 7) + '\n')
+            print('='*(sum(max_size) + 9) + '\n')
         else:
             print_message(text.empty_phone_book)
 
