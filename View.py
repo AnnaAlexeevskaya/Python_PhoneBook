@@ -16,6 +16,6 @@ def main_menu() -> int:
 
 def show_contacts(p_book: dict[int, list[str]]):
         for n, contact in p_book.items():
-             print(f'{n}. {contact[0]} {contact[1]} ')
+             print(f'{n}. {contact[0]} ')
 
     
