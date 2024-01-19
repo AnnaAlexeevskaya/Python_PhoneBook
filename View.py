@@ -20,7 +20,7 @@ def show_contacts(p_book: dict[int, list[str]]):
         if p_book:
             print(p_book)
             for n, contact in p_book.items():
-                print(f'{n}. {contact[0]} {contact[1]} {contact[2]} ')
+                print(f'{n:>3}. {contact[0]:<{max_size[0]+1}} {contact[1]:<{max_size[1]+1}} {contact[2]:<{max_size[2]+1}} ')
         else:
             print_message(text.empty_phone_book)
 
