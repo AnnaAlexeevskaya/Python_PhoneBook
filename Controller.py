@@ -10,6 +10,7 @@ def start_app():
         match choice:
             case 1:
                 pb = Model.open_file()
+                print(pb)
             case 2:
                 pass            
             case 3:
