@@ -4,15 +4,16 @@ import Model
 
 
 def start_app():
+    pb = Model.phone_book
     while True:
         choice = View.main_menu()
         match choice:
             case 1:
-                model.open_file()
+                pb = Model.open_file()
             case 2:
                 pass            
             case 3:
-                pass            
+                View.show_contacts(pb)            
             case 4:
                 pass            
             case 5:

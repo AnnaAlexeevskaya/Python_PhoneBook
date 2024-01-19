@@ -12,4 +12,10 @@ def main_menu() -> int:
         if choice.isdigit() and 0 < int(choice) < len(text.main_menu):
             return int(choice) 
         print(f'Введите пункт меню от 1 до {len(text.main_menu)-1} ')
+
+
+def show_contacts(p_book: dict[int, list[str]]):
+        for n, contact in p_book.items():
+             print(f'{n}. {contact[0]} {contact[1]} {contact[2]}')
+
     
