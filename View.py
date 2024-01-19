@@ -16,7 +16,7 @@ def main_menu() -> int:
 
 def show_contacts(p_book: dict[int, list[str]]):
         max_size = list(map(lambda x: len(max(x, key = len)), list(zip(*p_book.values()))))
-        print(max_size)
+
         if p_book:
             print('\n' + '=' * (sum(max_size) + 9))
             for n, contact in p_book.items():
@@ -36,6 +36,10 @@ def add_contact(message: list[str]):
     for mes in message:
         contact.append(input(mes))
     return contact
+
+def find_contact():
+    pass
+
 
 
 
