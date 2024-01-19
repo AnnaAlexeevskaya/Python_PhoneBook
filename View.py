@@ -31,5 +31,13 @@ def print_message(message: str):
     print('='*len(message) + '\n')
 
 
+def add_contact(message: list[str]):
+    contact = []
+    for mes in message:
+        contact.append(input(mes))
+    return contact
+
+
+
 
     

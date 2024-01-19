@@ -13,3 +13,10 @@ main_menu_choice = 'Выберите пункт меню:'
 load_successful = 'Телефонная книга успешно загружена'
 
 empty_phone_book = '! Телефонная книга пуста или не открыта !'
+
+new_contact  = ['Введите имя:',
+                'Введите номер телефона:',
+                'Введите комментарий:']
+
+def new_contact_added_successful(name: str) -> str
+    return f'Контакт {name} успешно добавлен!'
