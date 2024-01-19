@@ -18,5 +18,5 @@ new_contact  = ['Введите имя:',
                 'Введите номер телефона:',
                 'Введите комментарий:']
 
-def new_contact_added_successful(name: str) -> str
+def new_contact_added_successful(name: str) -> str:
     return f'Контакт {name} успешно добавлен!'
