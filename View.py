@@ -15,8 +15,11 @@ def main_menu() -> int:
 
 
 def show_contacts(p_book: dict[int, list[str]]):
-        print(p_book)
-        for n, contact in p_book.items():
-             print(f'{n}. {contact[0]} {contact[1]} {contact[2]} ')
+        if p_book:
+            print(p_book)
+            for n, contact in p_book.items():
+                print(f'{n}. {contact[0]} {contact[1]} {contact[2]} ')
+        else:
+            print(text.empty_phone_book)
 
     
