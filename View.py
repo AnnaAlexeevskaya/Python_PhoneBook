@@ -20,6 +20,13 @@ def show_contacts(p_book: dict[int, list[str]]):
             for n, contact in p_book.items():
                 print(f'{n}. {contact[0]} {contact[1]} {contact[2]} ')
         else:
-            print(text.empty_phone_book)
+            print_message(text.empty_phone_book)
+
+def print_message(message: str):
+    print('\n' + '='*len(message))
+    print(message)
+    print('='*len(message) + '\n')
+
+
 
     
