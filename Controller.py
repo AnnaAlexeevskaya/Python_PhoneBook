@@ -17,7 +17,7 @@ def start_app():
                 pb = Model.phone_book
                 View.show_contacts(pb)            
             case 4:
-                contact = View.add_contact(text.ew_contact)
+                contact = View.add_contact(text.new_contact)
                 Model.new_contact(contact)
                 View.print_message(text.new_contact_added_successful(contact[0]))            
             case 5:
