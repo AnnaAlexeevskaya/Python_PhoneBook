@@ -15,6 +15,8 @@ def main_menu() -> int:
 
 
 def show_contacts(p_book: dict[int, list[str]]):
+        max_size = [list(zip(p_book.values))]
+        print(max_size)
         if p_book:
             print(p_book)
             for n, contact in p_book.items():
