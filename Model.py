@@ -57,11 +57,12 @@ class PhoneBook:
         return self.phonebook.pop(c_id)
     
     def max_len(self):
-        max_field_lens = [0,0,0]
+        max_field_lens = [0, 0, 0]
         for contact in self.phonebook.values():
             for n, field in enumerate(['name', 'phone', 'comment']):
                 if max_field_lens[n] < contact.field_len(field):
                     max_field_lens[n] = contact.field_len(field)
+        print(f'max_field_lens = {max_field_lens }')
         return max_field_lens    
 
 
