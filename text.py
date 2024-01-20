@@ -25,11 +25,8 @@ def new_contact_added_successful(name: str) -> str:
 
 input_search_word = 'Введите слово для поиска: '
 
-
-
 def contacts_not_found(word: str) -> str:
     return f'Контакты содержащие {word} не найдены !'
-
 
 input_id_change_contact = 'Введите ID контакта, который хотите изменить: '
 
@@ -40,11 +37,9 @@ change_contact = ['Введите новое имя или ENTER, чтобы н�
 def contact_changed_successful(name: str) -> str:
     return f'Контакт {name} успешно изменен !'
 
-
 input_id_delete_contact = 'Введите ID контакта, который хотите удалить: '
 
 def contact_deleted_successful(name: str) -> str:
     return f'Контакт {name} успешно удален !'
-
 
 good_bye = 'До новых встреч !'
