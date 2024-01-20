@@ -20,3 +20,10 @@ new_contact  = ['Введите имя:',
 
 def new_contact_added_successful(name: str) -> str:
     return f'Контакт {name} успешно добавлен!'
+
+input_search_word = 'Введите слово для поиска'
+
+
+
+def contacts_not_found(word: str) -> str:
+    return f'Контакты содержащие {word} не найдены!'

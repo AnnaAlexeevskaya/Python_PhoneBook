@@ -24,5 +24,12 @@ def new_contact(contact: list[str]):
     phone_book[next_id()] = contact
 
 
+def find_contact(word: str) -> dict[int, list[str]]:
+    global phone_book
+    result = {}
+    for u_id, contact in phone_book.items():
+        if word.lower() in str(contact).lower:
+            result[u_id] = contact
+    return result
 
 
