@@ -1,5 +1,5 @@
 import text
-from Model import Contact, PhoneBook
+import Model
 
 
 def main_menu() -> int:
