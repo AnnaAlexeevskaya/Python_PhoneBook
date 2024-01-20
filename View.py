@@ -15,7 +15,7 @@ def main_menu() -> int:
 
 
 def show_contacts(p_book: dict[int, list[str]], error_messsage: str):
-        max_size = list(map(lambda x: len(max(x, key = len)), list(zip(*p_book.values()))))
+        max_size = list(map(lambda x: len(max(x, key = len)), list(zip(p_book.values()))))
 
         if p_book:
             print('\n' + '=' * (sum(max_size) + 9))
