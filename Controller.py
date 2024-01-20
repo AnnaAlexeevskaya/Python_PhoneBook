@@ -20,7 +20,7 @@ def start_app():
                 pb.save_file()
                 View.print_message(text.save_successful)
             case 3:
-                View.show_contacts(pb.phonebook, text.empty_phone_book)            
+                View.show_contacts(pb, text.empty_phone_book)            
             case 4:
                 contact = View.add_contact(text.new_contact)
                 pb.new_contact(contact)
