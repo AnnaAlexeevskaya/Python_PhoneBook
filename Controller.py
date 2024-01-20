@@ -3,6 +3,9 @@ import View
 import Model
 
 def find_contact():
+    word = View.input_data(text.input_search_word)
+    result = Model.find_contact(word)
+    View.show_contacts(result, text.contacts_not_found(word)) 
 
 
 
@@ -24,10 +27,8 @@ def start_app():
                 Model.new_contact(contact)
                 View.print_message(text.new_contact_added_successful(contact[0]))            
             case 5:
-                # word = View.input_data(text.input_search_word)
-                # result = Model.find_contact(word)
-                # View.show_contacts(result, text.contacts_not_found(word))        
                 find_contact()
+
             case 6:
                 find_contact()
                 pb = Model.phone_book
