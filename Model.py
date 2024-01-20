@@ -12,7 +12,14 @@ def open_file():
 
 
 def save_file():
-    pass
+    global phone_book
+    data = []
+    for contact in phone_book.values():
+        data.append(SEPARATOR.join(contact))
+    data = '\n'.join(data)
+    with open(path, 'w', encoding = 'UTF-8') as file:
+        file.write(data)
+
 
 def next_id():
     global phone_book

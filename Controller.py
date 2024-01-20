@@ -18,7 +18,8 @@ def start_app():
                 pb = Model.open_file()
                 View.print_message(text.load_successful)
             case 2:
-                pass            
+                Model.save_file()
+                View.print_message(text.save_successful)
             case 3:
                 pb = Model.phone_book
                 View.show_contacts(pb, text.empty_phone_book)            
