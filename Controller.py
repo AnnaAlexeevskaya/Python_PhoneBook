@@ -4,12 +4,12 @@ import Model
 
 def find_contact(phones: Model.PhoneBook):
     word = View.input_data(text.input_search_word)
-    result = pb.find_contact(word)
+    result = phones.find_contact(word)
     View.show_contacts(result, text.contacts_not_found(word)) 
 
 
 def start_app():
-    pb = Model.PhoneBook
+    pb = Model.PhoneBook()
     while True:
         choice = View.main_menu()
         match choice:
