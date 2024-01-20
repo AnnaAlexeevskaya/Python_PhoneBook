@@ -32,4 +32,9 @@ def find_contact(word: str) -> dict[int, list[str]]:
             result[u_id] = contact
     return result
 
+def change_contact(c_id: int, c_contact: list[str]):
+    global phone_book
+    phone_book[c_id] = c_contact
+
+
 

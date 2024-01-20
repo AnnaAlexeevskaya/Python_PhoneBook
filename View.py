@@ -31,10 +31,11 @@ def print_message(message: str):
     print('='*len(message) + '\n')
 
 
-def add_contact(message: list[str]):
-    contact = []
-    for mes in message:
-        contact.append(input(mes))
+def add_contact(message: list[str], contact: list[str] = None):
+    contact = contact if contact else ['', '', '']
+    for n, mes in enumerate(message):
+        field = input(mes)
+        contact[n] = field if field else contact[n]
     return contact
 
 def input_data(message: str) -> str:
