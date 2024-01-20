@@ -39,7 +39,7 @@ def start_app():
                 find_contact()
                 pb = Model.phone_book
                 c_id = int(View.input_data(text.input_id_delete_contact))
-                name = Model.delete_contact(c_id).values()[0]
+                name = Model.delete_contact(c_id)[0]
                 View.print_message(text.contact_changed_successful(name))       
             case 8:
                 break
