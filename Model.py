@@ -62,7 +62,6 @@ class PhoneBook:
             for n, field in enumerate(['name', 'phone', 'comment']):
                 if max_field_lens[n] < contact.field_len(field):
                     max_field_lens[n] = contact.field_len(field)
-        print(f'max_field_lens = {max_field_lens }')
         return max_field_lens    
 
 

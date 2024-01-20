@@ -14,7 +14,7 @@ def start_app():
         choice = View.main_menu()
         match choice:
             case 1:
-                pb = pb.open_file()
+                pb.open_file()
                 View.print_message(text.load_successful)
             case 2:
                 pb.save_file()
