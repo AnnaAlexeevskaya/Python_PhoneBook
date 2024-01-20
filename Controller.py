@@ -28,7 +28,6 @@ def start_app():
                 View.print_message(text.new_contact_added_successful(contact[0]))            
             case 5:
                 find_contact()
-
             case 6:
                 find_contact()
                 pb = Model.phone_book
@@ -37,6 +36,10 @@ def start_app():
                 Model.change_contact(c_id, c_contact)  
                 View.print_message(text.contact_changed_successful(c_contact[0]))       
             case 7:
-                pass
+                find_contact()
+                pb = Model.phone_book
+                c_id = int(View.input_data(text.input_id_delete_contact))
+                name = Model.delete_contact(c_id).values()[0]
+                View.print_message(text.contact_changed_successful(name))       
             case 8:
                 break

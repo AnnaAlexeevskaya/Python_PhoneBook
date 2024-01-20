@@ -37,3 +37,9 @@ change_contact = ['Введите новое имя или ENTER, чтобы н�
 
 def contact_changed_successful(name: str) -> str:
     return f'Контакт {name} успешно изменен!'
+
+
+input_id_delete_contact = 'Введите ID контакта, который хотите удалить: '
+
+def contact_deleted_successful(name: str) -> str:
+    return f'Контакт {name} успешно удален!'

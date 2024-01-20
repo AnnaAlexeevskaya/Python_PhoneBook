@@ -36,5 +36,9 @@ def change_contact(c_id: int, c_contact: list[str]):
     global phone_book
     phone_book[c_id] = c_contact
 
+def delete_contact(c_id: int) -> dict[int, list[str]]:
+    global phone_book
+    return phone_book.pop(c_id)
+
 
 
