@@ -43,8 +43,8 @@ class PhoneBook:
     def new_contact(self, contact: list[str]):
         self.phonebook[self.next_id()] = Contact(*contact)
 
-    def find_contact(self, word: str) -> dict[int, list[str]]:
-        result = {}
+    def find_contact(self, word: str) -> 'PhoneBook':
+        result = PhoneBook{}
         for u_id, contact in self.phonebook.items():
             if word.lower() in str(contact.to_str()).lower():
                 result[u_id] = contact
