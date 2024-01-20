@@ -45,3 +45,6 @@ input_id_delete_contact = 'Введите ID контакта, который х
 
 def contact_deleted_successful(name: str) -> str:
     return f'Контакт {name} успешно удален !'
+
+
+good_bye = 'До новых встреч !'

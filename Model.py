@@ -10,7 +10,6 @@ def open_file():
       
 
 
-
 def save_file():
     global phone_book
     data = []

@@ -8,7 +8,6 @@ def find_contact():
     View.show_contacts(result, text.contacts_not_found(word)) 
 
 
-
 def start_app():
     pb = Model.phone_book
     while True:
@@ -42,4 +41,5 @@ def start_app():
                 name = Model.delete_contact(c_id)[0]
                 View.print_message(text.contact_deleted_successful(name))       
             case 8:
+                View.print_message(text.good_bye)
                 break
