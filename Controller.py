@@ -2,43 +2,41 @@ import text
 import View
 import Model
 
-def find_contact():
+def find_contact(phones: Model.PhoneBook):
     word = View.input_data(text.input_search_word)
-    result = Model.find_contact(word)
+    result = pb.find_contact(word)
     View.show_contacts(result, text.contacts_not_found(word)) 
 
 
 def start_app():
-    pb = Model.phone_book
+    pb = Model.PhoneBook
     while True:
         choice = View.main_menu()
         match choice:
             case 1:
-                pb = Model.open_file()
+                pb = pb.open_file()
                 View.print_message(text.load_successful)
             case 2:
-                Model.save_file()
+                pb.save_file()
                 View.print_message(text.save_successful)
             case 3:
-                pb = Model.phone_book
-                View.show_contacts(pb, text.empty_phone_book)            
+                View.show_contacts(pb.phonebook, text.empty_phone_book)            
             case 4:
                 contact = View.add_contact(text.new_contact)
-                Model.new_contact(contact)
+                pb.new_contact(contact)
                 View.print_message(text.new_contact_added_successful(contact[0]))            
             case 5:
-                find_contact()
+                find_contact(pb)
             case 6:
-                find_contact()
-                pb = Model.phone_book
+                find_contact(pb)
                 c_id = int(View.input_data(text.input_id_change_contact))
-                c_contact = View.add_contact(text.change_contact, pb[c_id])
-                Model.change_contact(c_id, c_contact)  
+                c_contact = View.add_contact(text.change_contact, pb.phonebook[c_id])
+                pb.change_contact(c_id, c_contact)  
                 View.print_message(text.contact_changed_successful(c_contact[0]))       
             case 7:
-                find_contact()
+                find_contact(pb)
                 c_id = int(View.input_data(text.input_id_delete_contact))
-                name = Model.delete_contact(c_id)[0]
+                name = pb.delete_contact(c_id)[0]
                 View.print_message(text.contact_deleted_successful(name))       
             case 8:
                 View.print_message(text.good_bye)
