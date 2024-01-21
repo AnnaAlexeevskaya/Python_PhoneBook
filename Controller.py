@@ -1,6 +1,7 @@
 import text
 import View
 import Model
+from Model import Contact
 
 def find_contact(phones: Model.PhoneBook):
     word = View.input_data(text.input_search_word)
@@ -32,7 +33,7 @@ def start_app():
                 c_id = int(View.input_data(text.input_id_change_contact))
                 c_contact = View.add_contact(text.change_contact, pb.phonebook[c_id])
                 pb.change_contact(c_id, c_contact)
-                View.print_message(text.contact_changed_successful(c_contact(0)))
+                View.print_message(text.contact_changed_successful(c_contact[0]))
             case 7:
                 find_contact(pb)
                 c_id = int(View.input_data(text.input_id_delete_contact))
