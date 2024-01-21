@@ -37,7 +37,7 @@ def start_app():
             case 7:
                 find_contact(pb)
                 c_id = int(View.input_data(text.input_id_delete_contact))
-                name = pb.delete_contact(c_id)[0]
+                name = pb.delete_contact(c_id).name
                 View.print_message(text.contact_deleted_successful(name))
             case 8:
                 View.print_message(text.good_bye)
