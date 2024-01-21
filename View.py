@@ -37,10 +37,10 @@ def add_contact(message: list[str], contact: list[str] = None):
     contact = contact if contact else ['', '', '']
     for n, mes in enumerate(message):
         field = input(mes)
-        contact[n] = field if field else contact[n]
+        # contact[n] = field if field else contact[n]
+        contact.field = field if field else contact.field
     return contact
 
-# contact1.field = field if field else contact1.field
 
 
 def input_data(message: str) -> str:
