@@ -10,7 +10,7 @@ def find_contact(phones: Model.PhoneBook):
 
 def start_app():
     pb = Model.PhoneBook()
-    contact = Model.Contact()
+    
     while True:
         choice = View.main_menu()
         match choice:
