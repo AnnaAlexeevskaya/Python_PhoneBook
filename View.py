@@ -1,6 +1,6 @@
 import text
-from Model import Contact
-from Model import PhoneBook
+import Model
+
 
 
 def main_menu() -> int:
@@ -12,7 +12,7 @@ def main_menu() -> int:
     while True:
         choice = input(text.main_menu_choice)
         if choice.isdigit() and 0 < int(choice) < len(text.main_menu):
-            return int(choice) 
+            return int(choice)
         print(f'Введите пункт меню от 1 до {len(text.main_menu)-1} ')
 
 
@@ -42,10 +42,3 @@ def add_contact(message: list[str], contact: list[str] = None):
 
 def input_data(message: str) -> str:
     return input(message)
-    
-
-
-
-
-
-    
