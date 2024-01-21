@@ -45,9 +45,9 @@ class PhoneBook:
 
     def find_contact(self, word: str) -> 'PhoneBook':
         result = PhoneBook()
-        for u_id, contact in self.phonebook():
+        for u_id, contact in self.phonebook.items():
             if word.lower() in str(contact.to_str()).lower():
-                result.phonebook[u_id] = Contact(*contact)
+                result.phonebook[u_id] = Contact(contact[0, contact[1], contact[2]])
         return result
 
     def change_contact(self, c_id: int, c_contact: list[str]):
