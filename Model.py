@@ -47,7 +47,7 @@ class PhoneBook:
         result = PhoneBook()
         for u_id, contact in self.phonebook.items():
             if word.lower() in str(contact.to_str()).lower():
-                result.phonebook[u_id] = Contact()
+                result.phonebook[u_id] = Contact(*contact)
         return result
 
     #contact.name:<{max_size[0]}} {contact.phone:<{max_size[1]}} {contact.comment:<{max_size[2]}
