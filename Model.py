@@ -41,7 +41,7 @@ class PhoneBook:
            return (max(self.phonebook) + 1) if self.phonebook else 1
 
     def new_contact(self, contact: list[str]):
-        self.phonebook[self.next_id()] = contact
+        self.phonebook[self.next_id()] = Contact(*contact)
 
     def find_contact(self, word: str) -> 'PhoneBook':
         result = PhoneBook()
