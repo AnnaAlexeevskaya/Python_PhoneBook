@@ -45,7 +45,7 @@ class PhoneBook:
 
     def find_contact(self, word: str) -> 'PhoneBook':
         result = PhoneBook()
-        for u_id, contact in self.phonebook.items():
+        for u_id, contact in self.phonebook():
             if word.lower() in str(contact.to_str()).lower():
                 result.phonebook[u_id] = Contact(*contact)
         return result
@@ -63,5 +63,3 @@ class PhoneBook:
                 if max_field_lens[n] < contact.field_len(field):
                     max_field_lens[n] = contact.field_len(field)
         return max_field_lens
-
-
