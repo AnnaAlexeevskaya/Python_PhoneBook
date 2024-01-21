@@ -47,8 +47,10 @@ class PhoneBook:
         result = PhoneBook()
         for u_id, contact in self.phonebook.items():
             if word.lower() in str(contact.to_str()).lower():
-                result.phonebook[u_id] = Contact(*contact)
+                result.phonebook[u_id] = Contact(contact.name[0], contact.phone[1], contact.comment[2])
         return result
+
+    #contact.name:<{max_size[0]}} {contact.phone:<{max_size[1]}} {contact.comment:<{max_size[2]}
 
     def change_contact(self, c_id: int, c_contact: list[str]):
         self.phonebook[c_id] = Contact(*c_contact)
