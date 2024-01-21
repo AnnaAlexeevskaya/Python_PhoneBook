@@ -3,7 +3,7 @@ class Contact:
         self.name = name
         self.phone = phone
         self.comment = comment
-    
+
     def to_str(self, sep: str = ' '):
         return f'{self.name}{sep}{self.phone}{sep}{self.comment}'
 
@@ -27,7 +27,7 @@ class PhoneBook:
             for c_id, contact in enumerate(file.readlines(), 1):
                 contact = contact.strip().split(self.separator)
                 self.phonebook[c_id] = Contact(*contact)
- 
+
 
     def save_file(self):
         data = []
@@ -55,15 +55,13 @@ class PhoneBook:
 
     def delete_contact(self, c_id: int) -> list[str]:
         return self.phonebook.pop(c_id)
-    
+
     def max_len(self):
         max_field_lens = [0, 0, 0]
         for contact in self.phonebook.values():
             for n, field in enumerate(['name', 'phone', 'comment']):
                 if max_field_lens[n] < contact.field_len(field):
                     max_field_lens[n] = contact.field_len(field)
-        return max_field_lens    
-
-
+        return max_field_lens
 
 
