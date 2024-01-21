@@ -35,13 +35,15 @@ def print_message(message: str):
 
 def add_contact(message: list[str], contact: Contact = None): #list[str] = None
     # (message: list[str], contact: Contact): #list[str] = None
-    contact = contact if contact else ['', '', '']
+    #contact = contact if contact else ['', '', '']
     for n, mes in enumerate(message):
         field = input(mes)
         # contact[n] = field if field else contact[n]
         #contact.name = field if field else  contact.name
         contact.name = field if field else  contact.name
+        field = input(mes)
         contact.phone = field if field else  contact.phone
+        field = input(mes)
         contact.comment = field if field else  contact.comment
     return contact
 
