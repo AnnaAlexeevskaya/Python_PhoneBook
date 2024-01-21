@@ -10,7 +10,7 @@ def find_contact(phones: Model.PhoneBook):
 
 def start_app():
     pb = Model.PhoneBook()
-    
+
     while True:
         choice = View.main_menu()
         match choice:
@@ -23,7 +23,7 @@ def start_app():
             case 3:
                 View.show_contacts(pb, text.empty_phone_book)
             case 4:
-                contact = View.add_contact(text.new_contact)
+                contact = View.add_contact(text.new_contact, contact: Model.Contact)
                 pb.new_contact(contact)
                 View.print_message(text.new_contact_added_successful(contact[0]))
             case 5:
