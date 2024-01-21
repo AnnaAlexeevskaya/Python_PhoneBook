@@ -50,8 +50,6 @@ class PhoneBook:
                 result.phonebook[u_id] = contact
         return result
 
-    #contact.name:<{max_size[0]}} {contact.phone:<{max_size[1]}} {contact.comment:<{max_size[2]}
-#contact.name[0], contact.phone[1], contact.comment[2]
     def change_contact(self, c_id: int, c_contact: list[str]):
         self.phonebook[c_id] = c_contact
 
