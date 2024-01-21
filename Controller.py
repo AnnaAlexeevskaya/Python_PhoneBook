@@ -31,9 +31,8 @@ def start_app():
             case 6:
                 find_contact(pb)
                 c_id = int(View.input_data(text.input_id_change_contact))
-                print(c_id)
-                print(type(pb.phonebook[c_id]))
-                c_contact = View.add_contact(text.change_contact, pb.phonebook[c_id])
+                #print(type(pb.phonebook[c_id]))
+                c_contact = View.add_contact(text.change_contact, Model.Contact[c_id])
                 pb.change_contact(c_id, c_contact)
                 View.print_message(text.contact_changed_successful(c_contact.name))
             case 7:
