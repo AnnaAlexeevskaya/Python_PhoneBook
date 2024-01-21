@@ -51,7 +51,7 @@ class PhoneBook:
         return result
 
     def change_contact(self, c_id: int, c_contact: list[str]):
-        self.phonebook[c_id] = c_contact
+        self.phonebook[c_id] = Contact(*c_contact)
 
     def delete_contact(self, c_id: int) -> list[str]:
         return self.phonebook.pop(c_id)
