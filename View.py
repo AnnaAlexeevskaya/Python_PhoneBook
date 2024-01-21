@@ -1,5 +1,5 @@
 import text
-from Model import PhoneBook
+from Model import PhoneBook, Contact
 
 
 
@@ -33,15 +33,24 @@ def print_message(message: str):
     print('='*len(message) + '\n')
 
 
-def add_contact(message: list[str], contact: list[str] = None): #list[str] = None
-    # (message: list[str], contact: Contact): #list[str] = None
-    contact = contact if contact else ['', '', '']
+# def add_contact(message: list[str], contact: list[str] = None): #list[str] = None
+#     # (message: list[str], contact: Contact): #list[str] = None
+#     contact = contact if contact else ['', '', '']
+#     for n, mes in enumerate(message):
+#         field = input(mes)
+#         contact[n] = field if field else contact[n]
+#         #contact.name = field if field else  contact.name
+#     return contact
+
+
+def add_contact(message: list[str], contact: Contact = None) -> Contact:
+    contact = contact if contact else Contact('', '', '')
+
     for n, mes in enumerate(message):
         field = input(mes)
-        contact[n] = field if field else contact[n]
-        #contact.name = field if field else  contact.name
-    return contact
+        setattr(contact, ['name', 'phone', 'comment'][n], field)
 
+    return contact
 
 
 def input_data(message: str) -> str:
