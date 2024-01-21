@@ -25,7 +25,7 @@ def start_app():
             case 4:
                 contact = View.add_contact(text.new_contact)
                 pb.new_contact(contact)
-                View.print_message(text.new_contact_added_successful(contact[0]))
+                View.print_message(text.new_contact_added_successful(contact.name))
             case 5:
                 find_contact(pb)
             case 6:
