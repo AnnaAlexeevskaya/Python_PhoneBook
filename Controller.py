@@ -1,7 +1,6 @@
 import text
 import View
 import Model
-from Model import Contact, PhoneBook
 
 def find_contact(phones: Model.PhoneBook):
     word = View.input_data(text.input_search_word)
@@ -11,6 +10,7 @@ def find_contact(phones: Model.PhoneBook):
 
 def start_app():
     pb = Model.PhoneBook()
+    contact = Model.Contact()
     while True:
         choice = View.main_menu()
         match choice:

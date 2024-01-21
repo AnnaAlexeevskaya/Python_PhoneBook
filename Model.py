@@ -1,3 +1,4 @@
+
 class Contact:
     def __init__(self, name: str, phone: str, comment: str):
         self.name = name
@@ -27,7 +28,6 @@ class PhoneBook:
             for c_id, contact in enumerate(file.readlines(), 1):
                 contact = contact.strip().split(self.separator)
                 self.phonebook[c_id] = Contact(*contact)
-
 
     def save_file(self):
         data = []

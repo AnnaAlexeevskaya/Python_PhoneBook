@@ -1,5 +1,5 @@
 import text
-from Model import Contact, PhoneBook
+from Model import PhoneBook, Contact
 
 
 
