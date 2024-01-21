@@ -23,7 +23,7 @@ def start_app():
             case 3:
                 View.show_contacts(pb, text.empty_phone_book)
             case 4:
-                contact = View.add_contact(text.new_contact, None)
+                contact = View.add_contact(text.new_contact)
                 pb.new_contact(contact)
                 View.print_message(text.new_contact_added_successful(contact.name))
             case 5:
